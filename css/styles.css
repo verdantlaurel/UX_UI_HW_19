@@ -1,0 +1,474 @@
+body {     
+  margin: 0;
+  padding-top: 0px;
+  font-size: 18px;
+  background-color: #EEEEEE;  
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Navigation CSS */
+
+.navBar {
+  z-index: 900; /* SHOULDN'T THIS MAKE THE HEADER STAY ON TOP?  */
+}
+
+.navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 20px;
+  overflow: hidden;
+  background-color: #222222;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25); /* drop shadow */
+}
+
+.navBar li {
+  float: right;
+}
+
+.navBar li a {
+  display: inline-block;
+  color: #EEEEEE;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 0px;
+  padding-right: 40px;
+  font-size: 20pt;
+  text-decoration: none;  
+  font-family: 'Poiret One', cursive;
+}
+
+.navBar li a:hover {
+    color: #EEEEEE;
+    font-weight: bold;
+  }
+
+
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -116px;
+    visibility: hidden;
+}
+  
+
+/* Above Fold CSS */
+
+.heroGrid {
+  margin: 0px;
+  padding-top: 50px;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: 
+  "left logo right"
+  "left logo right"
+  "left logo right";
+}
+
+#leftGraphic {
+  grid-area: left;
+  display: flex;
+  margin-top: 0px;
+  overflow: hidden;
+}
+
+#rightGraphic {       
+  grid-area: right;
+  display: flex;
+  align-content: right;
+  margin-left: 10px;
+  margin-top: 15px;
+  float: right;  
+}
+
+.heroGridArea {
+  margin: 0px;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas:
+  "left logo right"
+  "left logo right"
+  "left logo right";
+}
+
+.heroLogo {        
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 175px;
+  align-items: center;
+  max-width: 700px;
+  height: auto;
+}
+
+.heroLogo img {   /* WHY IN FRONT OF HEADER ON SCROLL? */
+    animation: grow-and-shrink 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;        
+}
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+/* About CSS */
+
+#aboutGrid {
+  margin: 0px;
+  display: grid;
+  justify-content: space-between;  
+  grid-template-rows: 200px 200px 350px;
+  grid-template-columns: 35% 45% 20%;
+  grid-template-areas: "hello text null"
+                       "hello text null"
+                       "resume resume null";  
+}
+
+.helloContainer img {   /* WHY IN FRONT OF HEADER ON SCROLL? */
+  grid-area: hello;  
+  height: auto;
+  float:left !important;
+  width: 100%;
+  position: relative;
+  margin-left: -10% !important;
+  margin-top: -10% !important;
+  overflow: hidden;
+}
+
+.resume-container { 
+  grid-area: resume;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-right: 10px;    
+}
+
+.aboutGridArea {
+  margin: 0px;
+  cursor: pointer;  
+}
+
+
+/* Work CSS */
+
+.workGrid {     /* CHANGE TO FLEX? */
+  margin: 0px;  
+  display: grid;
+  justify-content: center;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25); /* drop shadow */
+  grid-template-rows: 100px 700px 100px;
+  grid-template-areas: 
+  "heading"
+  "slides"
+  "dots";  
+}
+
+
+/* SLIDESHOW CSS */
+.slideshowContainer {
+  display: inline-flex;
+  padding: 20px;
+  padding-top: 80px;
+  grid-area: slides;
+}
+
+.slideCard {
+  border: none;
+  padding: 0 6px;
+  float: left;
+  width:25%;
+  grid-area: slides;  
+}
+
+.hover-opacity:hover{
+  opacity:0.65
+}
+.hover-opacity-off:hover{
+  opacity:1
+}
+
+.slideOverlay {   /* WHY IN FRONT OF HEADER ON SCROLL? */
+  padding: 0px;
+  margin: 0px;
+  margin-top: -5px;
+  opacity: 65%;
+  color:#EEEEEE !important;
+  background-color:#222222 !important;
+  justify-content: flex-end;  
+}
+
+.slideOverlay:after,.slideOverlay:before {   /* UNSURE WHAT THIS DOES */
+  content: "";
+  display: table;
+}
+
+#caseStudyTitle {   /* WHY IN FRONT OF HEADER ON SCROLL? */
+  color:#EEEEEE !important;
+  padding-left: 15px; 
+  padding-top: 10px;
+  margin: 0;
+  font-size: 20pt;
+  text-decoration: none;  
+  font-family: 'Poiret One', cursive;
+} 
+
+#slideCaption {    /* WHY IN FRONT OF HEADER ON SCROLL? */
+  color:#EEEEEE !important;
+  padding-left: 15px; 
+  padding-top: 10px;
+  margin: 0; 
+  font-size: 10pt;
+  text-decoration: none;  
+  font-family: 'Montserrat', sans-serif;
+} 
+
+.button{     /* WHY IN FRONT OF HEADER ON SCROLL? */
+  border:none;
+  display:inline-flex;
+  padding:8px 16px;  
+  margin-top: 10px;
+  margin-left: 16px;
+  margin-right: auto;
+  margin-bottom:16px!important;  
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+  color: #222222!important;
+  background-color:#EEEEEE !important;
+  font-family: 'Montserrat', sans-serif;  
+}
+
+/* position the "next" button to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add black transparent background */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 20px 2px;
+  background-color: #AEAEAE;
+  border-radius: 50%;
+  display: flex;
+  transition: background-color 0.6s ease;
+  grid-area: dots;
+}
+  
+.active, .dot:hover {
+  background-color: #EEEEEE;
+}
+  
+/* fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Contact CSS */
+
+.contactGrid {
+  margin: 0px;
+  margin-top: 10px;
+  padding: 60px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 100px 300px 275px;
+  grid-template-areas: 
+  "contact-heading"
+  "text"
+  "icons";
+}
+
+.contactIcons img {
+  grid-area: icons;
+  margin: 20px;
+}
+
+/* Resume CSS */  /* ADD accordion to sections for UI interaction! */
+
+.resumeGrid {
+  display: grid;
+  margin: 0px;
+  padding-top: 50px;
+  grid-template-rows: 150px 1500px 1500px;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-areas: 
+  "left resume right"
+  "left resume right"
+  "left resume right";
+}
+
+.resumeSection{
+  grid-area: resume;
+  margin: 50px;
+  padding-top: 5px;
+  display: grid;
+}
+
+.resumeSection h2{
+  color:#905421;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poiret One', cursive;
+}
+
+.resumeSection p{
+  color: #222222;
+  margin: 0px;
+  padding: 0px;
+}
+
+.resumeSection li{
+  color: #222222;
+  margin: 0px;
+  padding: 5px;
+}
+
+
+
+
+/* Typography CSS */
+
+
+.heading #about {
+  color: #905421;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: top;  
+  margin: 40px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
+} 
+
+.heading #work {
+  grid-area: heading;
+  color: #222222;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: top;  
+  margin: 40px;
+  margin-top: 80px;
+  margin-bottom: 0px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
+} 
+
+.heading #contact {
+  grid-area: contact-heading;
+  color: #905421;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: top;  
+  margin: 0px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
+} 
+
+.heading #resume {
+  grid-area: contact-heading;
+  color: #905421;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: top;  
+  margin: 20px;  
+  margin-top: 70px;
+  margin-bottom: 0px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
+} 
+
+
+.heroGrid p1 {
+  grid-area: logo;
+  color: #222222;
+  font-size: 55px;
+  margin-top: 44px;
+  text-align: center;
+  vertical-align: top;  
+  font-family: 'Poiret One', cursive;
+} 
+
+.heroGrid p2 {
+  grid-area: logo;
+  color: #905421;
+  font-size: 45px;
+  text-align: center;
+  vertical-align: top;  
+  font-family: 'Poiret One', cursive;
+} 
+
+
+#aboutText {    /* HOW TO MAKE TEXT FLOW AROUND THE IMAGES? */
+  grid-area: text;
+  display: inline;
+  align-items: center;
+  width: 95%;
+  margin: 10px;
+  color: #222222;
+  vertical-align: top; 
+}
+
+.workGrid p {     
+  color: #222222;
+  font-size: 55px;
+  vertical-align: top; 
+}
+
+#contactText { 
+  padding: 10%;
+}
+
+#contactText p {    
+  color: #222222;
+  text-align: center;  
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222222;
+  color: #EEEEEE;
+  height: 75px;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+  
+/* Media Query CSS */
+
+@media (min-width:601px){
+    .slideCard{
+      width:33.33333%
+  }
+}

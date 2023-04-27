@@ -1,0 +1,338 @@
+
+/* Preloader CSS */
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100000;
+  background-color: white;
+  top: 0;
+  display: flex;
+  align-items: center;
+  }
+
+  .preloader img {
+    animation: spin 3s ease;
+    transition: all;
+    width: 150px;
+    margin: 0 auto;    
+  }
+  
+/* CSS Animations */
+  
+   @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%)
+    }
+  }
+
+
+  /* logo spin */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.logoImage img {
+  animation: spin 2s ease;
+  transition: all;
+  width: auto;
+  margin: 0 auto;    
+}
+
+
+/* Slideshow CSS */
+
+.slideshow-container {
+  max-width: 500px;
+  max-height: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: inline-flex;
+  flex-direction: row;
+  padding-left: 3%;
+  }
+
+  /* next/previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+* {box-sizing: border-box} /* NOT SURE WHAT THIS DOES? */
+
+
+
+  /* position "next" button to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+  /* on hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+  /* dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #AEAEAE;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #EEEEEE;
+}
+
+  /* fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* Slideshow with Thumbnails CSS */
+* {
+  box-sizing: border-box;
+}
+
+  /* position image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* hide images by default */
+.mySlides {
+  display: hide;
+}
+
+/* add pointer when hovering over thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* next/previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position:absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: 10px;
+  color: #EEEEEE;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add black transparent background */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* five columns side by side */
+.column {
+  float: left;
+  padding-left: 1%;
+  width: 15%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+  /* dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 20px 2px;
+    background-color: #AEAEAE;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #EEEEEE;
+  }
+  
+    /* fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
+
+
+/* Other Slideshow elements */
+
+  /* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/5, 2/5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+  
+/* Work CSS */
+
+.workGrid {
+  margin: 0px;
+  margin-top: 10px;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #905421;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25); /* drop shadow */
+}
+
+/* Contact CSS */
+
+.contactGrid {
+  margin: 0px;
+  padding-top: 50px;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* Resume CSS */
+
+.bulletList ul {
+  display: flex;
+  list-style-type: circle;
+  grid-area: resume;
+  flex-direction: column;
+  margin: auto;
+  padding-left: 20px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;  
+}
+
+.bulletList li {
+  display: flex;
+  grid-area: resume;
+  color: #222222;
+  text-align: left;
+  font-size: 14px;
+  font-family: Monts;
+}
+
+
+
+/* Typography CSS */
+
+#aboutGrid .heading {
+  grid-area: text;
+  display: flex;
+  max-width: 300px;
+  height: auto;
+  vertical-align: top;
+}
+
+
+#navBar p {          /* CAN BE DELETED? */               
+  font-size: 28px;
+  justify-content: flex-baseline;
+}
+
+#title {       /* CAN BE DELETED? */        
+  font-size: 45px;
+  color: #A26747;
+  margin-top: 20px;
+}
