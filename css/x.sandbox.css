@@ -1,23 +1,5 @@
 
-/* Preloader CSS */
 
-.preloader {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 100000;
-  background-color: white;
-  top: 0;
-  display: flex;
-  align-items: center;
-  }
-
-  .preloader img {
-    animation: spin 3s ease;
-    transition: all;
-    width: 150px;
-    margin: 0 auto;    
-  }
   
 /* CSS Animations */
   
@@ -335,4 +317,34 @@
   font-size: 45px;
   color: #A26747;
   margin-top: 20px;
+}
+
+
+/* SLIDESHOW */
+
+h2{
+  text-align: center;
+}
+
+.container{
+  margin: 0 auto;
+  max-width:100%;
+  border: 2px solid #2e2e2e;
+}
+
+.slider{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: scroll;
+}
+
+.slide + .slide {
+  margin-left: 50px;
+}
+
+.slide{
+  text-align: center;
+  max-width: 35% ;
+  height: 50%;
 }

@@ -3,10 +3,10 @@
 $(document).ready(function() {
     $(".hello-image").hover(
       function() {
-        $(this).attr("src", "./images/button headshot image.png");
+        $(this).attr("src", "./images/button hello black.png");
       },
       function() {
-        $(this).attr("src", "./images/button hello black.png");
+        $(this).attr("src", "./images/button headshot image.png");
       }
     );
   });

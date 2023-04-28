@@ -33,10 +33,11 @@ body {
   display: inline-block;
   color: #EEEEEE;
   text-align: center;
+  letter-spacing: 2px;
   padding-top: 32px;
   padding-bottom: 0px;
   padding-right: 40px;
-  font-size: 20pt;
+  font-size: 16pt;
   text-decoration: none;  
   font-family: 'Poiret One', cursive;
 }
@@ -178,7 +179,8 @@ body {
 
 /* SLIDESHOW CSS */
 .slideshowContainer {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   padding: 20px;
   padding-top: 80px;
   grid-area: slides;
@@ -360,19 +362,22 @@ body {
 
 
 .heading #about {
-  color: #905421;
+  color: #EEEEEE;
   font-size: 55px;
+  letter-spacing: 5px;
   text-align: center;
   vertical-align: top;  
+  padding-top: 20px;
   margin: 40px;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', cursive;  
   font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
 } 
 
 .heading #work {
   grid-area: heading;
-  color: #222222;
+  color: #EEEEEE;
   font-size: 55px;
+  letter-spacing: 5px;
   text-align: center;
   vertical-align: top;  
   margin: 40px;
@@ -382,13 +387,13 @@ body {
   font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
 } 
 
-.heading #contact {
-  grid-area: contact-heading;
-  color: #905421;
+#contact {  
+  color: #EEEEEE;
   font-size: 55px;
-  text-align: center;
+  letter-spacing: 5px;
+  text-align: right;
   vertical-align: top;  
-  margin: 0px;
+  margin: 15px;
   font-family: 'Poiret One', cursive;
   font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
 } 
@@ -431,9 +436,10 @@ body {
   grid-area: text;
   display: inline;
   align-items: center;
+  font-size: 14px;
   width: 95%;
   margin: 10px;
-  color: #222222;
+  color: #EEEEEE;
   vertical-align: top; 
 }
 
@@ -443,28 +449,41 @@ body {
   vertical-align: top; 
 }
 
-#contactText { 
-  padding: 10%;
-}
-
-#contactText p {    
-  color: #222222;
-  text-align: center;  
-}
 
 footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: right;  
   background-color: #222222;
   color: #EEEEEE;
-  height: 75px;
-  font-size: 14px;
+  width: 100%;
+  height: 200px;
+  font-size: 16px;
   text-align: center;
 }
 
+.email {  
+  margin-top: 10px;
+  text-decoration: none;
+  align-self: right;
+  font-family: 'Montserrat', sans-serif;  
+  color: #EEEEEE;
+}
 
-  
+.email:hover {
+  color: #EEEEEE;
+  text-decoration: underline;  
+}
+
+#logo img{
+  max-height: 30px;
+  margin: 15px;
+}
+
+#logo img:hover {
+  transform: scale(1.25);
+}
+
 /* Media Query CSS */
 
 @media (min-width:601px){
