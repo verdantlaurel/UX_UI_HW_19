@@ -363,7 +363,7 @@ body {
 
 .heading #about {
   color: #EEEEEE;
-  font-size: 55px;
+  font-size: 50px;
   letter-spacing: 5px;
   text-align: center;
   vertical-align: top;  
@@ -376,7 +376,7 @@ body {
 .heading #work {
   grid-area: heading;
   color: #EEEEEE;
-  font-size: 55px;
+  font-size: 45px;
   letter-spacing: 5px;
   text-align: center;
   vertical-align: top;  
@@ -389,7 +389,7 @@ body {
 
 #contact {  
   color: #EEEEEE;
-  font-size: 55px;
+  font-size: 45px;
   letter-spacing: 5px;
   text-align: right;
   vertical-align: top;  
@@ -400,8 +400,8 @@ body {
 
 .heading #resume {
   grid-area: contact-heading;
-  color: #905421;
-  font-size: 55px;
+  color: #EEEEEE;
+  font-size: 45px;
   text-align: center;
   vertical-align: top;  
   margin: 20px;  
@@ -415,7 +415,7 @@ body {
 .heroGrid p1 {
   grid-area: logo;
   color: #222222;
-  font-size: 55px;
+  font-size: 45px;
   margin-top: 44px;
   text-align: center;
   vertical-align: top;  
