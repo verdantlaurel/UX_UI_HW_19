@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>       
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300&family=Poiret+One&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <title>Laura Steinkopf | UX/UI Designer</title> 
-
-    <style>
-    body {
-    background-image: url("images/bg-texture-neutral-wash-landscape.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;    
-    }
-    </style>
-</head>
+    <head>       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300&family=Poiret+One&display=swap" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <title>Laura Steinkopf | UX/UI Designer</title> 
+    
+        <style>    
+        .mySlides {display: none}
+    
+        body {
+        background-image: url("images/bg-texture-neutral-wash.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;   
+        background-attachment:scroll;
+        } 
+        </style>
+    </head>
 
 <body>
 
     <div class="navBar">
         <ul>
             <a href="index.html"><img src="images/logo-with-name-light.png" alt="logo+name" height="65"></a>  
-            <li><a href="index.html#bottom">CONTACT</a></li>
-            <li><a href="index.html#work">WORK</a></li>
-            <li><a href="index.html#about">ABOUT</a></li>     
+            <li><a class="contact" href="#contact">CONTACT</a></li> <!-- does NOT work w/anchor link offset JS -->  
+            <li><a class="resume" href="resume.html">RESUME</a></li>     <!-- works w/anchor link offset JS-->  
+            <li><a class="about" href="#about">ABOUT</a></li>     <!-- works w/anchor link offset JS-->  
+            <li><a class="work" href="#work">WORK</a></li>       <!-- works w/anchor link offset JS-->  
         </ul>
-    </div>
+        </div>
 
 
 <div class="resumeGrid">
 
-    <div id="leftGraphic"> <!--WHY NOT ON LEFT SIDE OF PAGE? SAME CODE AS INDEX.HMTML -->
-        <img src="images/left line graphic.png" alt="sienna retro line graphic" height="800">
-    </div>     
-    
- 
-
-    <div class="resumeContainer">
+    <div class="resumeContainer">   <!-- add collapsing sections for skills, etc. -->  
 
         <div class="heading">
             <p id="resume">RESUME</p>
@@ -117,10 +115,7 @@
             <h4>Brown College . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2000 – 2002</h4>
             <p>A.A.S. Visual Communications						
         </div>
-
-        <div id="rightGraphic">  <!-- WHY NOT IN RIGHT GRID SECTION? -->
-            <img src="images/right line graphic.png" alt="black retro line graphic" height="1842">
-        </div>   
+         
     </div>
 </div>
 
@@ -131,7 +126,18 @@
 </body>
 
 <footer id="footer">
-    <p>&#169 2023 | Laura Steinkopf</p>    
-</footer>
+    <div>
+      <p id="contact">GET IN TOUCH</p>
+    </div>
+    <div>
+      <a class="email" href="mailto: l.e.steinkopf@gmail.com">l.e.steinkopf@gmail.com</a> 
+    </div>
+    <div>
+      <a id="logo" href="https://www.linkedin.com/in/laurasteinkopf/"><img src="images/logo-linkedin.png"></a>
+      <a id="logo" href="https://www.facebook.com/LauraSteinkopf"><img src="images/logo-facebook.png"></a>
+      <a id="logo" href="https://www.instagram.com/verdantlaurel/"><img src="images/logo-instagram.png"></a>
+    </div>
+  </div>
+  </footer>
 
 </html>

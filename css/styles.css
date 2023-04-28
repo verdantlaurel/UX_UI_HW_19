@@ -10,7 +10,7 @@ body {
 /* Navigation CSS */
 
 .navBar {
-  z-index: 900; /* SHOULDN'T THIS MAKE THE HEADER STAY ON TOP?  */
+  z-index: 1500; /* SHOULDN'T THIS MAKE THE HEADER STAY ON TOP?  */
 }
 
 .navBar ul {
@@ -54,67 +54,14 @@ body {
     top: -116px;
     visibility: hidden;
 }
+
+.navBar li a:active {
+  font-weight: bold;
+}
   
 
 /* Above Fold CSS */
 
-.heroGrid {
-  margin: 0px;
-  padding-top: 50px;
-  display: grid;
-  grid-template-rows: 300px 300px 300px;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-areas: 
-  "left logo right"
-  "left logo right"
-  "left logo right";
-}
-
-#leftGraphic {
-  grid-area: left;
-  display: flex;
-  margin-top: 0px;
-  overflow: hidden;
-}
-
-#rightGraphic {       
-  grid-area: right;
-  display: flex;
-  align-content: right;
-  margin-left: 10px;
-  margin-top: 15px;
-  float: right;  
-}
-
-.heroGridArea {
-  margin: 0px;
-  cursor: pointer;
-  display: grid;
-  grid-template-rows: 300px 300px 300px;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-areas:
-  "left logo right"
-  "left logo right"
-  "left logo right";
-}
-
-.heroLogo {        
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 175px;
-  align-items: center;
-  max-width: 700px;
-  height: auto;
-}
-
-.heroLogo img {   /* WHY IN FRONT OF HEADER ON SCROLL? */
-    animation: grow-and-shrink 2000ms;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;        
-}
 
 @keyframes grow-and-shrink {
   0% {
@@ -387,16 +334,6 @@ body {
   font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
 } 
 
-#contact {  
-  color: #EEEEEE;
-  font-size: 45px;
-  letter-spacing: 5px;
-  text-align: right;
-  vertical-align: top;  
-  margin: 15px;
-  font-family: 'Poiret One', cursive;
-  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
-} 
 
 .heading #resume {
   grid-area: contact-heading;
@@ -458,16 +395,36 @@ footer {
   color: #EEEEEE;
   width: 100%;
   height: 200px;
-  font-size: 16px;
-  text-align: center;
+  font-size: 16px;  
 }
 
+#contact {  
+  color: #EEEEEE;
+  font-size: 45px;
+  letter-spacing: 5px;
+  text-align: right;
+  vertical-align: top;  
+  margin: 15px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
+} 
+
+
+footer div {
+
+}
+
+
 .email {  
-  margin-top: 10px;
   text-decoration: none;
   align-self: right;
   font-family: 'Montserrat', sans-serif;  
   color: #EEEEEE;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding-top: 10px;
+  padding-right: 20px;
 }
 
 .email:hover {
@@ -475,10 +432,10 @@ footer {
   text-decoration: underline;  
 }
 
-#logo img{
+#logo img {
   max-height: 30px;
-  padding: 15px;
-  
+  padding: 25px 20px 20px 10px;  
+  float: right;
 }
 
 #logo img:hover {
